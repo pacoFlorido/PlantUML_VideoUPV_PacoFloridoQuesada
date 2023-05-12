@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+:Agente: as a
+(Enviar solicitud credito) as (e)
+(Enviar solicitud de credito personal) as (e1)
+(Enviar solicitud de credito empresarial) as (e2)
+a --> (e)
+(e) <|-- (e1)
+(e) <|-- (e2)
+@enduml

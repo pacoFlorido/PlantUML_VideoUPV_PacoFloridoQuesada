@@ -1,0 +1,8 @@
+@startuml
+left to right direction
+:Agente: as a
+(Evaluar\nSolicitud de Credito) as (e)
+(Solicitar Informacion adicional \nal cliente) as (s)
+a --> (e)
+(e) <|.. (s): <<extends>>
+@enduml

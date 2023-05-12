@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+:Empleado: as e
+
+(Introducir\nPedido) as (ip)
+(Obtener Estado\nPedido) as (oep)
+(Buscar Pedido) as (bbp)
+(Alta Cliente) as (ac)
+(Buscar Cliente) as (bc)
+(Cancelar\nPedido) as (cp)
+
+e -- (ac)
+e -- (ip)
+e -- (oep)
+e -- (cp)
+e -- (bbp)
+
+(ac) .|> (ip): <<extends>>
+(ip) ..> (bc): <<include>>
+(ip) <|.. (Pago con\ntarjeta): <<extends>>
+(ip) <|.. (Pago en\ncuenta): <<extends>>
+
+(oep)..>(bbp):<<include>>
+(cp)..>(bbp):<<include>>
+@enduml

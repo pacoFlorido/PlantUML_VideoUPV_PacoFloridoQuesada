@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+:Actor: as actor1
+:Actor: as actor2
+rectangle Sistema {
+(Caso de uso) as (c1)
+(Caso de uso) as (c2)
+(Caso de uso) as (c3)
+}
+actor1 -- (c1)
+actor1 -- (c2)
+actor1 -- (c3)
+(c1) -- actor2
+(c3) -- actor2
+@enduml
